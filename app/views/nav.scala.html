@@ -1,0 +1,6 @@
+@(submissions: List[Submission])
+<ul class="nav nav-pills nav-stacked" >
+@submissions.map { sub =>
+<li><a href="#@sub.id">@sub.name</a></li>
+}
+</ul>

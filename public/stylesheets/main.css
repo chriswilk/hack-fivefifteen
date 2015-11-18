@@ -1,0 +1,40 @@
+h1
+{
+    font-size: 18pt;
+    border-bottom: 1px solid #4bc6df;
+}
+
+h2
+{
+    font-size: 14pt;
+    color: #666666;
+    padding-bottom:10px;
+    border-bottom: 2px solid #666666;
+}
+
+h3
+{
+    font-size: 12pt;
+    color: #888888;
+}
+
+.page-header
+{
+    border-bottom: 5px solid #4bc6df;
+    text-align: center;
+}
+
+svg
+{
+    margin: 0px auto;
+}
+
+.nav.nav-pills.nav-stacked
+{
+    margin-top:15px;
+}
+
+.submission
+{
+    padding-bottom: 20px;
+}

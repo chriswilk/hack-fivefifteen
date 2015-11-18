@@ -1,0 +1,48 @@
+@(submissions: List[Submission])
+
+@main("This week") {
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+
+            @nav(submissions)
+        </div>
+        <div class="col-md-9">
+
+            @submissions.map { sub =>
+            <div class="submission">
+            <a name="@sub.id"></a>
+            <h2>@sub.name</h2>
+            @sub.cards.map { card =>
+            <h3>@card.name
+
+            @if(card.labels.isEmpty){
+                <span class="label label-success">Green</span>
+                }
+
+            @card.labels.map { labelsOpt =>
+                @labelsOpt.map { label =>
+
+                    @if(label.color == "red") {
+                    <span class="label label-danger">Red</span>
+                    }
+                    @if(label.color == "orange") {
+                    <span class="label label-warning">Amber</span>
+                    }
+                    @if(label.color == "green") {
+                    <span class="label label-success">Green</span>
+                    }
+                }
+            }
+            </h3>
+            @Html(card.htmlDesc)
+            <hr/>
+
+            }
+            </div>
+            }
+        </div>
+    </div>
+
+</div>
+}
